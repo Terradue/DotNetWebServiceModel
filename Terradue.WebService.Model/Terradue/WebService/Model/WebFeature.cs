@@ -61,6 +61,9 @@ namespace Terradue.WebService.Model {
         [ApiMember(Name = "Position", Description = "Feature position", ParameterType = "query", DataType = "int", IsRequired = false)]
         public int Position { get; set; }
 
+        [ApiMember(Name = "Dotted", Description = "Feature is dotted", ParameterType = "query", DataType = "bool", IsRequired = false)]
+        public bool Dotted { get; set; }
+
 
         public WebFeature() {}
         public WebFeature(Terradue.Portal.Feature entity) : base(entity) {
@@ -71,6 +74,7 @@ namespace Terradue.WebService.Model {
             this.ButtonLink = entity.ButtonLink;
             this.ButtonText = entity.ButtonText;
             this.Position = entity.Position;
+            this.Dotted = entity.Dotted;
         }
         public Terradue.Portal.Feature ToEntity(IfyContext context, Terradue.Portal.Feature input){
             Terradue.Portal.Feature feat = (input == null ? new Terradue.Portal.Feature(context) : input);
@@ -82,6 +86,7 @@ namespace Terradue.WebService.Model {
             feat.Image = this.Image;
             feat.ImageStyle = this.ImageStyle;
             feat.Position = this.Position;
+            feat.Dotted = this.Dotted;
 
             return feat;
         }
