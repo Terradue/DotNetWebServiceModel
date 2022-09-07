@@ -54,6 +54,10 @@ namespace Terradue.WebService.Model {
         public string IconUrl { get; set; }
         [ApiMember(Name = "ValidationUrl", Description = "Service validation url", ParameterType = "query", DataType = "string", IsRequired = false)]
         public string ValidationUrl { get; set; }
+        [ApiMember(Name = "TutorialUrl", Description = "Service tutorial url", ParameterType = "query", DataType = "string", IsRequired = false)]
+        public string TutorialUrl { get; set; }
+        [ApiMember(Name = "SpecUrl", Description = "Service specification url", ParameterType = "query", DataType = "string", IsRequired = false)]
+        public string SpecUrl { get; set; }
         [ApiMember(Name = "Tags", Description = "Service Tags", ParameterType = "query", DataType = "List<string>", IsRequired = false)]
         public List<string> Tags { get; set; }
 
@@ -70,6 +74,8 @@ namespace Terradue.WebService.Model {
             this.Available = entity.Available;
             this.IconUrl = entity.IconUrl;
             this.ValidationUrl = entity.ValidationUrl;
+            this.TutorialUrl = entity.TutorialUrl;
+            this.SpecUrl = entity.SpecUrl;
             this.Tags = entity.GetTagsAsList();
             this.Quotable = entity.Quotable;
         }
@@ -92,6 +98,8 @@ namespace Terradue.WebService.Model {
             entity.Available = this.Available;
             entity.IconUrl = this.IconUrl;
             entity.ValidationUrl = this.ValidationUrl;
+            entity.TutorialUrl = this.TutorialUrl;
+            entity.SpecUrl = this.SpecUrl;
             if (this.Tags != null && this.Tags.Count > 0) {
                 entity.Tags = "";
                 foreach (var tag in this.Tags) entity.AddTag(tag);
