@@ -56,6 +56,8 @@ namespace Terradue.WebService.Model {
         public string ValidationUrl { get; set; }
         [ApiMember(Name = "TutorialUrl", Description = "Service tutorial url", ParameterType = "query", DataType = "string", IsRequired = false)]
         public string TutorialUrl { get; set; }
+        [ApiMember(Name = "MediaUrl", Description = "Service media url", ParameterType = "query", DataType = "string", IsRequired = false)]
+        public string MediaUrl { get; set; }
         [ApiMember(Name = "SpecUrl", Description = "Service specification url", ParameterType = "query", DataType = "string", IsRequired = false)]
         public string SpecUrl { get; set; }
         [ApiMember(Name = "Tags", Description = "Service Tags", ParameterType = "query", DataType = "List<string>", IsRequired = false)]
@@ -75,6 +77,7 @@ namespace Terradue.WebService.Model {
             this.IconUrl = entity.IconUrl;
             this.ValidationUrl = entity.ValidationUrl;
             this.TutorialUrl = entity.TutorialUrl;
+            this.MediaUrl = entity.MediaUrl;
             this.SpecUrl = entity.SpecUrl;
             this.Tags = entity.GetTagsAsList();
             this.Quotable = entity.Quotable;
@@ -99,6 +102,7 @@ namespace Terradue.WebService.Model {
             entity.IconUrl = this.IconUrl;
             entity.ValidationUrl = this.ValidationUrl;
             entity.TutorialUrl = this.TutorialUrl;
+            entity.MediaUrl = this.MediaUrl;
             entity.SpecUrl = this.SpecUrl;
             if (this.Tags != null && this.Tags.Count > 0) {
                 entity.Tags = "";
