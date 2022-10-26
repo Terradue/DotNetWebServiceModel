@@ -20,7 +20,7 @@
     <Reference Include="System.Xml"/>
     <Reference Include="System.Xml.Linq"/>
     <Reference Include="System.Core"/>
-    <PackageReference Include="ServiceStack" Version="3.9.71" />
+    <PackageReference Include="ServiceStack" Version="5.9.2" />
     <PackageReference Include="ServiceStack.Common" Version="3.9.71" />
     <PackageReference Include="ServiceStack.Text" Version="3.9.71" />
     <PackageReference Include="ServiceStack.OrmLite.SqlServer" Version="3.9.71" />
