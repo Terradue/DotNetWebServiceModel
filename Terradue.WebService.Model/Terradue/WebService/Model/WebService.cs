@@ -60,6 +60,10 @@ namespace Terradue.WebService.Model {
         public string MediaUrl { get; set; }
         [ApiMember(Name = "SpecUrl", Description = "Service specification url", ParameterType = "query", DataType = "string", IsRequired = false)]
         public string SpecUrl { get; set; }
+        [ApiMember(Name = "PublishUrl", Description = "Service publish url", ParameterType = "query", DataType = "string", IsRequired = false)]
+        public string PublishUrl { get; set; }
+        [ApiMember(Name = "PublishType", Description = "Service publish type", ParameterType = "query", DataType = "string", IsRequired = false)]
+        public string PublishType { get; set; }
         [ApiMember(Name = "Tags", Description = "Service Tags", ParameterType = "query", DataType = "List<string>", IsRequired = false)]
         public List<string> Tags { get; set; }
 
@@ -79,6 +83,8 @@ namespace Terradue.WebService.Model {
             this.TutorialUrl = entity.TutorialUrl;
             this.MediaUrl = entity.MediaUrl;
             this.SpecUrl = entity.SpecUrl;
+            this.PublishType = entity.PublishType;
+            this.PublishUrl = entity.PublishUrl;
             this.Tags = entity.GetTagsAsList();
             this.Quotable = entity.Quotable;
         }
