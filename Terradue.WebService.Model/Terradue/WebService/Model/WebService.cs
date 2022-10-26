@@ -104,6 +104,8 @@ namespace Terradue.WebService.Model {
             entity.TutorialUrl = this.TutorialUrl;
             entity.MediaUrl = this.MediaUrl;
             entity.SpecUrl = this.SpecUrl;
+            entity.PublishUrl = this.PublishUrl;
+            entity.PublishType = this.PublishType;
             if (this.Tags != null && this.Tags.Count > 0) {
                 entity.Tags = "";
                 foreach (var tag in this.Tags) entity.AddTag(tag);
